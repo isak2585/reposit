@@ -1,0 +1,13 @@
+
+{% extends "master.html" %}
+
+   {% block title %} Membres {% endblock %}
+
+   {% block content %}
+      <h1>Membres</h1>
+      <ul>
+        {% for x in membres %}
+           <li><a href="/membres/details/{{ x.id }}">{{ x.nom }} {{ x.prenom }}</a></li>
+        {% endfor %}
+      </ul>
+   {% endblock %}
